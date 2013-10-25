@@ -26,6 +26,9 @@
 <% end %>
 </table>
 
+<div id="map"></div>
+<div id='actions'><a href='#'>Find me!</a></div>
+
 <script>
 
     function initMap() {
@@ -47,6 +50,12 @@
             $("#xcord").val(e.longitude);
             $("#ycord").val(e.latitude);
         });
+    }
+
+    function locateAndMarkRequest(map) {
+        map.locate({setView: true});
+        var marker = L.marker([51.5, -0.09]).addTo(map);
+
     }
 
     var map = initMap();
