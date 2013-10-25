@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  category: 
+  xcord: 1.5
+  ycord: 1.5
+  title: MyString
+  description: MyText
+
+two:
+  category: 
+  xcord: 1.5
+  ycord: 1.5
+  title: MyString
+  description: MyText
