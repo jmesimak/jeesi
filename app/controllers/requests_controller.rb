@@ -8,7 +8,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @requests }
+      format.json { render json: @requests.reverse }
     end
   end
 
