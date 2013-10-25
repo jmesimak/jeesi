@@ -16,3 +16,6 @@
 /tmp
 
 .idea/workspace.xml
+
+# ignore vim swap files
+*.swp

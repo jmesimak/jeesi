@@ -30,18 +30,6 @@ ActiveRecord::Schema.define(:version => 20131025143035) do
   add_index "comments", ["request_id"], :name => "index_comments_on_request_id"
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
-  create_table "models", :force => true do |t|
-    t.string   "Comment"
-    t.text     "content"
-    t.integer  "user_id"
-    t.integer  "request_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "models", ["request_id"], :name => "index_models_on_request_id"
-  add_index "models", ["user_id"], :name => "index_models_on_user_id"
-
   create_table "requests", :force => true do |t|
     t.integer  "category_id"
     t.float    "xcord"

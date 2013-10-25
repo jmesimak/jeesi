@@ -16,6 +16,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.13, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.13, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.13, ruby-2.0.0-p247) [gem]" level="application" />
@@ -53,6 +54,8 @@
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, ruby-2.0.0-p247) [gem]" level="application" />
+=======
+>>>>>>> c1a9c5dc8fa16a7273f859c9a648ad2ead419939
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
