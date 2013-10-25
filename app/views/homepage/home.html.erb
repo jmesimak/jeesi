@@ -1,4 +1,4 @@
-<h1>Homepage#home</h1>
+<h1>Jeesi</h1>
 <p>Find me in app/views/homepage/home.html.erb</p>
 
 <div id="map"></div>
@@ -22,50 +22,33 @@
             userxcord = e.longitude
             userycord = e.latitude
             userloc = new L.LatLng(userycord, userxcord);
-            console.log(userloc);
 
             $.getJSON( "/requests.json", function( data ) {
                 $.each( data, function( key, val ) {
                     val.latte = new L.LatLng(val.ycord, val.xcord);
                     val.distToUser = userloc.distanceTo(val.latte);
-                    console.log(val.distToUser);
-                    if (val.distToUser < 10000) {
+                    if (val.distToUser < 3001) {
                         items.push(val);
-                        console.log("LOGGED");
-
                         if (items.length == 5) {
-                            $.each( items, function(i) {
-                                $("<li>", {
-
-                                })
-                            });
-
-
-
                             return;
                         }
                     }
-                    console.log(val);
                 });
-
-                _.filter(items, function(i) { if (i.distToUser < 3001) return true});
                 console.log(items);
 
-                $( "<ul/>", {
-                    "class": "my-new-list",
-                    html: items.join( "" )
-                }).appendTo( "body" );
+                $.each (items, function(i) {
+                    var thingie = '<li><a href="/requests/'+items[i].id+'">' + items[i].title + '</a></li>'
+                    $("body").append(thingie)
+                });
             });
         });
     }
 
     var map = initMap();
+    locateUser(map);
     var userxcord;
     var userycord;
     var userloc;
     var items = [];
 
-    $('#actions').find('a').on('click', function() {
-        locateUser(map);
-    });
 </script>
