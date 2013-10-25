@@ -1,9 +1,9 @@
-<h1>Homepage#home</h1>
-<p>Find me in app/views/homepage/home.html.erb</p>
-
 <div id="map"></div>
+
 <div id='actions'><a href='#'>Find me!</a></div>
-<h5>Five recent help requests near you</h5>
+
+<h2>Five recent help requests near you</h2>
+
 <script>
 
     function initMap() {
@@ -40,8 +40,6 @@
                                 })
                             });
 
-
-
                             return;
                         }
                     }
@@ -68,4 +66,6 @@
     $('#actions').find('a').on('click', function() {
         locateUser(map);
     });
+
 </script>
+
