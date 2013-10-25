@@ -63,6 +63,12 @@
             $("#ycord").val(e.latitude);
 
             L.marker([e.latitude, e.longitude], {icon: redIcon}).addTo(map);
+
+            var circle = L.circle([e.latitude, e.longitude], 1500, {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.3
+            }).addTo(map);
         });
     }
 
