@@ -26,6 +26,36 @@
 <% end %>
 </table>
 
+<script>
+
+    function initMap() {
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+        }).addTo(map);
+
+        return map
+    }
+
+    function locateUser(map) {
+        map.locate({setView : true});
+        map.on("locationfound", function(e) {
+            console.log(e.latitude);
+            console.log(e.longitude);
+            $("#xcord").val(e.longitude);
+            $("#ycord").val(e.latitude);
+        });
+    }
+
+    var map = initMap();
+
+    $('#actions').find('a').on('click', function() {
+        locateUser(map);
+    });
+</script>
+
 <br />
 
 <%= link_to 'New Request', new_request_path %>
