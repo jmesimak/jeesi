@@ -1,4 +1,6 @@
 class RequestsController < ApplicationController
+  before_filter :authenticate_user!, :only => :create
+
   # GET /requests
   # GET /requests.json
   def index
@@ -14,6 +16,7 @@ class RequestsController < ApplicationController
   # GET /requests/1.json
   def show
     @request = Request.find(params[:id])
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb

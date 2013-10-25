@@ -54,7 +54,6 @@
 
     function locateAndMarkRequest(map) {
         var marker = L.marker([60.25, 24.9]).addTo(map);
-        // <%= "LOLLALSDLSJDALJ" %>
 
         var greenIcon = L.icon({
             iconUrl: '/assets/marker-icon.png',
@@ -75,7 +74,7 @@
     }
 
     var map = initMap();
-    locateAndMarkRequest(map);
+    locateAndMarkRequests(map);
 
     $('#actions').find('a').on('click', function() {
         locateUser(map);

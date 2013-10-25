@@ -1,10 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <b>Category:</b>
   <%= @request.category %>
 </p>
 
+<p>
+  <b>Title:</b>
+  <%= @request.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @request.description %>
+</p>
 
 <div id="map"></div>
 
@@ -22,16 +32,13 @@
     var map = initMap();
 </script>
 
-<p>
-  <b>Title:</b>
-  <%= @request.title %>
-</p>
+</br>
+<% @request.comments.each do |c| %>
+    <%= c.content %> </br>
+    by <%= c.user.email %> on <%= c.created_at %>  </br></br>
+<% end %>
 
-<p>
-  <b>Description:</b>
-  <%= @request.description %>
-</p>
-
+<%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
