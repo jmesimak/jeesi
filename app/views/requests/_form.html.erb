@@ -1,27 +1,26 @@
 <%= form_for(@request) do |f| %>
-  <% if @request.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
+    <% if @request.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
 
-      <ul>
-      <% @request.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @request.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
     <p>Map</p>
 
 
-  <div id="map"></div>
-  <div id='actions'><a href='#'>Find me!</a></div>
+    <div id="map"></div>
+    <div id='actions'><a href='#'>Find me!</a></div>
 
     <script>
 
         function initMap() {
             var map = L.map('map').setView([51.505, -0.09], 13);
-
             L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
                 maxZoom: 18,
                 attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
@@ -47,21 +46,23 @@
         });
     </script>
 
-  <div class="field">
-    <%= f.hidden_field :xcord, id: "xcord" %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :ycord, id: "ycord" %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="input-group">
+      <div class="field">
+        <%= f.hidden_field :xcord, id: "xcord" %>
+      </div>
+      <div class="field">
+        <%= f.hidden_field :ycord, id: "ycord" %>
+      </div>
+      <div class="field">
+        <%= f.label :title %><br />
+        <%= f.text_field :title, class:"form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
 <% end %>
