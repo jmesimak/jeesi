@@ -11,10 +11,6 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
-  </div>
     <p>Map</p>
 
 
@@ -32,19 +28,16 @@
             }).addTo(map);
 
             return map
-/*            var options = {center : new L.LatLng(51.930156,7.189230), zoom : 7 };
-
-            var osmUrl = 'http://{s}.tile.openstreetmap.org/mapnik_tiles/{z}/{x}/{y}.png',
-                    osmAttribution = 'Map data &copy; 2012 OpenStreetMap contributors',
-                    osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttribution});
-
-            var mapLayer = new L.TileLayer(osmUrl);
-
-            this.map = new L.Map('map', options).addLayer(mapLayer);*/
         }
 
         function locateUser(map) {
             map.locate({setView : true});
+            map.on("locationfound", function(e) {
+                console.log(e.latitude);
+                console.log(e.longitude);
+                $("#xcord").val(e.longitude);
+                $("#ycord").val(e.latitude);
+            });
         }
 
         var map = initMap();
@@ -55,12 +48,10 @@
     </script>
 
   <div class="field">
-    <%= f.label :xcord %><br />
-    <%= f.text_field :xcord %>
+    <%= f.hidden_field :xcord, id: "xcord" %>
   </div>
   <div class="field">
-    <%= f.label :ycord %><br />
-    <%= f.text_field :ycord %>
+    <%= f.hidden_field :ycord, id: "ycord" %>
   </div>
   <div class="field">
     <%= f.label :title %><br />
