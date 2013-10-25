@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/requests_controller.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382711962370" ignored="false" />
     <file path="/application.html.erb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382710801070" ignored="false" />
-    <file path="$PROJECT_DIR$/db/schema.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382713476435" ignored="false" />
+    <file path="$PROJECT_DIR$/db/schema.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382714772400" ignored="false" />
     <file path="/category.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382711558016" ignored="false" />
     <file path="/user.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382711549872" ignored="false" />
     <file path="/comments_controller.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382712407717" ignored="false" />
@@ -14,7 +14,7 @@
     <file path="/show.html.erb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382712627340" ignored="false" />
     <file path="/request.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382712161335" ignored="false" />
     <file path="/comment.rb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382712209037" ignored="false" />
-    <file path="/index.html.erb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382713806200" ignored="false" />
+    <file path="/index.html.erb" changelist="0662eff0-4b3f-44f6-aebd-d408a24b45b9" time="1382714816060" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +109,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/requests/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="9" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.31496063">
+            <state line="68" column="43" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.40944883">
               <folding />
             </state>
           </provider>
@@ -585,7 +585,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/requests/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="9" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.31496063">
+        <state line="68" column="43" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.40944883">
           <folding />
         </state>
       </provider>
