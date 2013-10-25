@@ -1,20 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<div id="request">
+  <h2><%= @request.title %></h2>
 
-<p>
-  <b>Category:</b>
-  <%= @request.category %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @request.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @request.description %>
-</p>
+  <div class="description">
+    <%= @request.description %>
+  </div>
+</div>
 
 <div id="map"></div>
 
@@ -46,11 +38,17 @@
     var map = initMap();
 </script>
 
-</br>
-<% @request.comments.each do |c| %>
-    <%= c.content %> </br>
-    by <%= c.user.email %> on <%= c.created_at %>  </br></br>
-<% end %>
+<div id="comments">
+  <% @request.comments.each do |c| %>
+    <div class="content">
+      <%= c.content %>
+    </div>
+
+    <div class="meta">
+      by <%= c.user.email %> &mdash; <%= time_ago_in_words c.created_at %> ago
+    </div>
+  <% end %>
+</div>
 
 <%= render 'comments/form' %>
 
