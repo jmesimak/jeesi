@@ -1,10 +1,21 @@
 <h1>Someone might need a hand</h1>
 
-<ul class="nav nav-tabs nav-stacked">
+<div class="accordion" id="accordion2">
   <% @requests.each do |r| %>
-    <li><%= link_to r.title, r %></li>
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-<%= r.id %>">
+          <%= r.title %>
+        </a>
+      </div>
+      <div id="collapse-<%= r.id %>" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <%= r.description %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
 
 <div id="map"></div>
 <div id='actions'><a href='#'>Find me!</a></div>
