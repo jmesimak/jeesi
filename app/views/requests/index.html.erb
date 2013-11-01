@@ -2,10 +2,17 @@
 
 
 <div class="list-group">
-  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item">Morbi leo risus</a>
-  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item">Vestibulum at eros</a>
+
+
+  <ul class="nav nav-tabs nav-stacked">
+    <% @requests.each do |request| %>
+        <li>
+          <a href="#"><%= request.title %>, <script></script></a>
+        </li>
+    <% end %>
+  </ul>
+
+
 </div>
 
 <div id="map"></div>
@@ -85,5 +92,11 @@
 </script>
 
 <br />
+
+<script>
+    $(function ()
+    { $("#example").popover();
+    });
+</script>
 
 <%= link_to 'New Request', new_request_path %>
