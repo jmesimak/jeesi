@@ -1,28 +1,12 @@
-<h1>Listing requests</h1>
+<h1>Someone might need a hand</h1>
 
-<table>
-  <tr>
-    <th>Category</th>
-    <th>Xcord</th>
-    <th>Ycord</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @requests.each do |request| %>
-  <tr>
-    <td><%= request.category %></td>
-    <td><%= request.xcord %></td>
-    <td><%= request.ycord %></td>
-    <td><%= request.title %></td>
-    <td><%= request.description %></td>
-    <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="list-group">
+  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item">Vestibulum at eros</a>
+</div>
 
 <div id="map"></div>
 <div id='actions'><a href='#'>Find me!</a></div>
@@ -85,8 +69,8 @@
         });
 
         <% @requests.each do |req| %>
-            var marker = L.marker([<%= req.ycord %>, <%= req.xcord %>], {icon: greenIcon}).addTo(map);
-            marker.bindPopup("<%= req.title%>").openPopup();
+        var marker = L.marker([<%= req.ycord %>, <%= req.xcord %>], {icon: greenIcon}).addTo(map);
+        marker.bindPopup("<%= req.title%>").openPopup();
         <% end %>
         //map.locate({setView: true});
         //map.locate({setView:})
