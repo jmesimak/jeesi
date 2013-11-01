@@ -35,4 +35,17 @@
     height: 10em;
   }
 }
+.form#sign-in {
+  label {
+    display: inline;
+  }
+
+  input[type=checkbox] {
+    margin-top: -2px;
+  }
+
+  .btn {
+    margin-top: 1em;
+  }
+}
 
