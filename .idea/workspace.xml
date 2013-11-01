@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7321110c-d763-4385-841a-a190d2f1be93" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/requests/index.html.erb" afterPath="$PROJECT_DIR$/app/views/requests/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/requests/show.html.erb" afterPath="$PROJECT_DIR$/app/views/requests/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jeesi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -11,7 +13,7 @@
     <file path="/show.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383317126308" ignored="false" />
     <file path="/requests_controller.rb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383317179924" ignored="false" />
     <file path="/application.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383317774223" ignored="false" />
-    <file path="/index.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383320280206" ignored="false" />
+    <file path="/index.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383321878070" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +36,25 @@
       <file leaf-file-name="home.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/homepage/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1282" selection-end="1282" vertical-scroll-proportion="-20.625">
+            <state line="27" column="20" selection-start="1033" selection-end="1080" vertical-scroll-proportion="-16.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/requests/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="302" selection-end="302" vertical-scroll-proportion="0.021390375">
+            <state line="10" column="36" selection-start="267" selection-end="267" vertical-scroll-proportion="-5.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/requests/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="33" selection-start="137" selection-end="137" vertical-scroll-proportion="0.065789476">
               <folding />
             </state>
           </provider>
@@ -133,9 +144,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/views/homepage/home.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/requests/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/requests_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/requests/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/requests/index.html.erb" />
       </list>
     </option>
@@ -355,6 +366,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -445,6 +460,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jeesi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jeesi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -886,23 +919,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/requests/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="267" selection-end="267" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/homepage/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1282" selection-end="1282" vertical-scroll-proportion="-20.625">
+        <state line="27" column="20" selection-start="1033" selection-end="1080" vertical-scroll-proportion="-16.875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/requests/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="52" selection-start="207" selection-end="207" vertical-scroll-proportion="-0.62828946">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/requests/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="302" selection-end="302" vertical-scroll-proportion="0.021390375">
+        <state line="4" column="33" selection-start="137" selection-end="137" vertical-scroll-proportion="0.065789476">
           <folding />
         </state>
       </provider>

@@ -1,19 +1,10 @@
 <h1>Someone might need a hand</h1>
 
-
-<div class="list-group">
-
-
-  <ul class="nav nav-tabs nav-stacked">
-    <% @requests.each do |request| %>
-        <li>
-          <a href="#"><%= request.title %>, <script></script></a>
-        </li>
-    <% end %>
-  </ul>
-
-
-</div>
+<ul class="nav nav-tabs nav-stacked">
+  <% @requests.each do |r| %>
+    <li><%= link_to r.title, r %></li>
+  <% end %>
+</ul>
 
 <div id="map"></div>
 <div id='actions'><a href='#'>Find me!</a></div>
@@ -50,6 +41,7 @@
             console.log(e.longitude);
             $("#xcord").val(e.longitude);
             $("#ycord").val(e.latitude);
+
 
             L.marker([e.latitude, e.longitude], {icon: redIcon}).addTo(map);
 
