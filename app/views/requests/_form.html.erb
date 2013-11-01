@@ -1,47 +1,18 @@
-<%= form_for(@request) do |f| %>
+<div id="new-request" class="form">
+  <%= form_for(@request) do |f| %>
     <% if @request.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
+      <div id="error_explanation">
+        <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
 
-          <ul>
-            <% @request.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
+        <ul>
+          <% @request.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
 
-    <p>Map</p>
     <div id="map"></div>
-    <script>
-
-        function initMap() {
-            var map = L.map('map').setView([51.505, -0.09], 13);
-            L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
-            }).addTo(map);
-
-            return map
-        }
-
-        function locateUser(map) {
-            map.locate({setView : true});
-            map.on("locationfound", function(e) {
-                console.log(e.latitude);
-                console.log(e.longitude);
-                $("#xcord").val(e.longitude);
-                $("#ycord").val(e.latitude);
-            });
-        }
-
-        var map = initMap();
-
-        //$('#actions').find('a').on('click', function() {
-            locateUser(map);
-        //});
-    </script>
-
     <div class="input-group">
       <div class="field">
         <%= f.hidden_field :xcord, id: "xcord" %>
@@ -58,7 +29,34 @@
         <%= f.text_area :description %></br>
       </div>
       <div class="actions">
-        <%= f.submit :class => "btn" %>
+        <%= f.submit 'Submit', :class => "btn btn-large btn-block btn-primary" %>
       </div>
     </div>
-<% end %>
+  <% end %>
+</div>
+
+<script>
+  function initMap() {
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+    }).addTo(map);
+
+    return map
+  }
+
+  function locateUser(map) {
+    map.locate({setView : true});
+    map.on("locationfound", function(e) {
+      console.log(e.latitude);
+      console.log(e.longitude);
+      $("#xcord").val(e.longitude);
+      $("#ycord").val(e.latitude);
+    });
+  }
+
+  var map = initMap();
+  locateUser(map);
+</script>
+
