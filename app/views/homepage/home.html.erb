@@ -27,10 +27,10 @@
                     val.latte = new L.LatLng(val.ycord, val.xcord);
                     val.distToUser = userloc.distanceTo(val.latte);
                     if (val.distToUser < 3001) {
-                        items.push(val);
                         if (items.length == 5) {
                             return;
                         }
+                        items.push(val);
                     }
                 });
                 console.log(items);
