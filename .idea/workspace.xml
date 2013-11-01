@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7321110c-d763-4385-841a-a190d2f1be93" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/requests/index.html.erb" afterPath="$PROJECT_DIR$/app/views/requests/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/requests/show.html.erb" afterPath="$PROJECT_DIR$/app/views/requests/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jeesi.iws" />
@@ -13,7 +12,7 @@
     <file path="/show.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383317126308" ignored="false" />
     <file path="/requests_controller.rb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383317179924" ignored="false" />
     <file path="/application.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383317774223" ignored="false" />
-    <file path="/index.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383321878070" ignored="false" />
+    <file path="/index.html.erb" changelist="7321110c-d763-4385-841a-a190d2f1be93" time="1383322787152" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/requests/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="33" selection-start="137" selection-end="137" vertical-scroll-proportion="0.065789476">
+            <state line="70" column="20" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.5427632">
               <folding />
             </state>
           </provider>
@@ -935,7 +934,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/requests/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="33" selection-start="137" selection-end="137" vertical-scroll-proportion="0.065789476">
+        <state line="70" column="20" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.5427632">
           <folding />
         </state>
       </provider>

@@ -5,7 +5,7 @@
     <div class="accordion-group">
       <div class="accordion-heading">
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-<%= r.id %>">
-          <%= r.title %>
+          <%= r.title %>, distance: <span class="dist" data-coordsX="<%= r.xcord %>" data-coordsY="<%= r.ycord %>"></span>
         </a>
       </div>
       <div id="collapse-<%= r.id %>" class="accordion-body collapse">
@@ -61,6 +61,21 @@
                 fillColor: '#f03',
                 fillOpacity: 0.3
             }).addTo(map);
+
+
+
+            function calculateDist() {
+                var request_links = $('.accordion-toggle');
+
+                for (var i = 0; i < request_links.length; i++ ) {
+
+
+                }
+
+                console.log(request_links);
+            }
+
+            calculateDist();
         });
     }
 
@@ -88,7 +103,7 @@
 
     var map = initMap();
     locateAndMarkRequests(map);
-
+    locateUser(map);
     $('#actions').find('a').on('click', function() {
         locateUser(map);
     });
