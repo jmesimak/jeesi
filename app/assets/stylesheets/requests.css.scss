@@ -15,8 +15,24 @@
 
 #map {
   height: 480px;
-  width: 640px;
+  width: 100%;
+  // width: 640px;
   border: 1px solid #e1e1e1;
   margin-bottom: 2em;
+}
+
+.form#new-request {
+  .field {
+    margin-bottom: 1em;
+  }
+
+  .field input,
+  .field textarea {
+    width: 98%;
+  }
+
+  .field textarea {
+    height: 10em;
+  }
 }
 
