@@ -1,12 +1,10 @@
 <h1>Someone might need a hand</h1>
 
-
-<div class="list-group">
-  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item">Morbi leo risus</a>
-  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item">Vestibulum at eros</a>
-</div>
+<ul class="nav nav-tabs nav-stacked">
+  <% @requests.each do |r| %>
+    <li><%= link_to r.title, r %></li>
+  <% end %>
+</ul>
 
 <div id="map"></div>
 <div id='actions'><a href='#'>Find me!</a></div>
