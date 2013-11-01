@@ -21,7 +21,6 @@
 <div id='actions'><a href='#'>Find me!</a></div>
 
 <script>
-
     function initMap() {
         var map = L.map('map').setView([60.25, 24.9], 6);
 
@@ -48,8 +47,6 @@
 
         map.locate();
         map.on("locationfound", function(e) {
-            console.log(e.latitude);
-            console.log(e.longitude);
             $("#xcord").val(e.longitude);
             $("#ycord").val(e.latitude);
 
@@ -63,16 +60,15 @@
             }).addTo(map);
 
 
-
             function calculateDist() {
-                var request_links = $('.accordion-toggle');
+                var childs = $('.accordion').children();
 
-                for (var i = 0; i < request_links.length; i++ ) {
-
-
+                for (var i = 0; i < childs.length; i++) {
+                    console.log($(childs[i]).find('#data-coordsX'));
+                    console.log($(childs[i]).find('.data-coordsX'));
+                    console.log($(childs[i]).find('data-coordsX'));
                 }
 
-                console.log(request_links);
             }
 
             calculateDist();
