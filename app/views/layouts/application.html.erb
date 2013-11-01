@@ -10,7 +10,7 @@
 
     <div id="torso">
       <header>
-        <h1><%= link_to "Jeesi", root_url %></h1>
+        <!--<h1>#<%= link_to "Jeesi", root_url %></h1> -->
       </header>
 
       <div class="navbar">
@@ -32,9 +32,10 @@
               <!-- .nav, .navbar-search, .navbar-form, etc -->
               <ul class="nav">
                 <% if current_user %>
-                  <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "btn active" %></li>
+                  <li><%= link_to 'New Help Request', new_request_path %></li>
+                  <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "pull-right" %></li>
                 <% else %>
-                  <li><%= link_to 'Signin', new_user_session_path, :class => "btn active" %></li>
+                  <li><%= link_to 'Signin', new_user_session_path, :class => "" %></li>
                 <% end %>
               </ul>
             </div> <!-- /.nav-collapse collapse -->

@@ -1,7 +1,5 @@
-
 <div id="map"></div>
 
-<div id='actions'><a href='#'>Find me!</a></div>
 
 <h2>Five recent help requests near you</h2>
 
@@ -37,9 +35,10 @@
                 });
                 console.log(items);
 
+
                 $.each (items, function(i) {
-                    var thingie = '<li><a href="/requests/'+items[i].id+'">' + items[i].title + '</a></li>'
-                    $("body").append(thingie)
+                    var thingie = '<a class="alert alert-success" href="/requests/'+items[i].id+'">' + items[i].title + '</a><br></br>'
+                    $("#torso").append(thingie)
                 });
             });
         });
