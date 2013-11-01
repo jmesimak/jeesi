@@ -1,16 +1,19 @@
 <h1>Someone might need a hand</h1>
 
+<div id="testi" data-coord="x"></div>
+
 <div class="accordion" id="accordion2">
   <% @requests.each do |r| %>
     <div class="accordion-group">
       <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-<%= r.id %>">
-          <%= r.title %>, distance: <span class="dist" data-coordsX="<%= r.xcord %>" data-coordsY="<%= r.ycord %>"></span>
+        <a class="accordion-toggle request-link" data-toggle="collapse" data-parent="#accordion2" href="#collapse-<%= r.id %>">
+          <%= r.title %>, distance: <span class="dist" data-xcoord="<%= r.xcord %>" data-ycoord="<%= r.ycord %>"></span>
         </a>
       </div>
       <div id="collapse-<%= r.id %>" class="accordion-body collapse">
         <div class="accordion-inner">
           <%= r.description %>
+          <p><%= link_to 'View this request', r %></p>
         </div>
       </div>
     </div>
@@ -50,6 +53,9 @@
             $("#xcord").val(e.longitude);
             $("#ycord").val(e.latitude);
 
+            userxcord = e.longitude
+            userycord = e.latitude
+            userloc = new L.LatLng(userycord, userxcord);
 
             L.marker([e.latitude, e.longitude], {icon: redIcon}).addTo(map);
 
@@ -59,16 +65,16 @@
                 fillOpacity: 0.3
             }).addTo(map);
 
-
             function calculateDist() {
-                var childs = $('.accordion').children();
+                var spans = $('.request-link span');
 
-                for (var i = 0; i < childs.length; i++) {
-                    console.log($(childs[i]).find('#data-coordsX'));
-                    console.log($(childs[i]).find('.data-coordsX'));
-                    console.log($(childs[i]).find('data-coordsX'));
+                for (var i = 0; i < spans.length; i++) {
+                  var span = $(spans[i]);
+                    var requestLoc = new L.LatLng(span.data('ycoord'), span.data('xcoord'));
+                    var distToUser = userloc.distanceTo(requestLoc);
+                    console.log(distToUser);
+                    span.html(parseInt(distToUser) + ' meters');
                 }
-
             }
 
             calculateDist();
