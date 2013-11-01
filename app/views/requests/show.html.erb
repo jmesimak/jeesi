@@ -6,6 +6,10 @@
   <div class="description">
     <%= @request.description %>
   </div>
+  <br>
+  <div class="username">
+    by <i><%= @request.user.email %> &mdash; <%= time_ago_in_words @request.created_at %> ago</i>
+  </div>
 </div>
 
 <div id="map"></div>
@@ -42,17 +46,25 @@
   <h2>Discuss</h2>
 
   <% @request.comments.each do |c| %>
-    <div class="content">
-      <%= c.content %>
-    </div>
+      <div class="content">
+        <%= c.content %>
+      </div>
 
-    <div class="meta">
-      by <%= c.user.email %> &mdash; <%= time_ago_in_words c.created_at %> ago
-    </div>
+      <div class="meta">
+        by <%= c.user.email %> &mdash; <%= time_ago_in_words c.created_at %> ago
+      </div>
   <% end %>
 </div>
 
+
 <%= render 'comments/form' %>
+
+<% if current_user %>
+    <% if @request.user.id == current_user.id %>
+        <%= button_to 'Delete request', {:controller => :requests, :action => 'destroy', :id => @request.id}, :confirm => "Are you sure?", :method => :delete, :class => "btn" %>
+    <% end %>
+<% end %>
+
 
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>

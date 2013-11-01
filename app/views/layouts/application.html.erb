@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Jeesi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
+<head>
+  <title>Jeesi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-    <div id="torso">
-      <header>
-        <!--<h1>#<%= link_to "Jeesi", root_url %></h1> -->
-      </header>
+<div id="torso">
+  <header>
+    <!--<h1>#<%= link_to "Jeesi", root_url %></h1> -->
+  </header>
 
-      <div class="navbar">
-        <div class="navbar-inner">
-          <div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
 
-            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
 
-            <!-- Be sure to leave the brand out there if you want it shown -->
-            <%= link_to "Jeesi", root_url, class: "brand" %>
+        <!-- Be sure to leave the brand out there if you want it shown -->
+        <%= link_to "Jeesi", root_url, class: "brand" %>
 
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-              <!-- .nav, .navbar-search, .navbar-form, etc -->
-              <ul class="nav">
-                <% if current_user %>
-                  <li><%= link_to 'New Help Request', new_request_path %></li>
-                  <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "pull-right" %></li>
-                <% else %>
-                  <li><%= link_to 'Signin', new_user_session_path, :class => "" %></li>
-                <% end %>
-              </ul>
-            </div> <!-- /.nav-collapse collapse -->
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <div class="nav-collapse collapse">
+          <!-- .nav, .navbar-search, .navbar-form, etc -->
+          <ul class="nav">
+            <% if current_user %>
+                <li><%= link_to 'New Help Request', new_request_path %></li>
+                <li><%= link_to 'All Requests', requests_path %></li>
+                <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "pull-right" %></li>
+            <% else %>
+                <li><%= link_to 'Signin', new_user_session_path, :class => "" %></li>
+            <% end %>
+          </ul>
+        </div> <!-- /.nav-collapse collapse -->
 
-          </div>
-        </div>
-      </div>
-
-
-      <p class="notice"><%= notice %></p>
-
-      <% if alert %>
-        <p class="alert"><%= alert %></p>
-      <% end %>
-
-      <div id="belly">
-        <%= yield %>
       </div>
     </div>
+  </div>
 
-  </body>
+
+  <p class="notice"><%= notice %></p>
+
+  <% if alert %>
+      <p class="alert"><%= alert %></p>
+  <% end %>
+
+  <div id="belly">
+    <%= yield %>
+  </div>
+</div>
+
+</body>
 </html>

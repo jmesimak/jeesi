@@ -77,11 +77,19 @@ class RequestsController < ApplicationController
   # DELETE /requests/1.json
   def destroy
     @request = Request.find(params[:id])
-    @request.destroy
 
-    respond_to do |format|
-      format.html { redirect_to requests_url }
-      format.json { head :no_content }
+    if @request.user == current_user
+
+      @request.destroy
+
+      respond_to do |format|
+        format.html { redirect_to requests_url }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to @request, notice: 'Only the user who made the request can delete it.', :class => "alert"}
+      end
     end
   end
 end
